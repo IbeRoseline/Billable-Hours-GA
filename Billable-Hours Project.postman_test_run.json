@@ -1,0 +1,187 @@
+{
+	"id": "8cca7a27-d87c-47c2-828e-fb4e650884ec",
+	"name": "Billable-Hours Project",
+	"timestamp": "2023-10-22T09:50:31.444Z",
+	"collection_id": "29076551-e245ddda-ba88-4adc-a81c-f86d8086b397",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 15,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2023-10-22T09:50:29.679Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "de3feaec-03a2-4840-9105-f398f4732f2d",
+			"name": "CSV File Content",
+			"url": "https://csvdemomockappp.bundlewallet.com.//invoice/parse",
+			"time": 341,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Validate that the 'id' field is present and is a non-empty string": true,
+				"Validate the 'companies' object": true,
+				"Verify that 'Google' and 'Facebook' keys are present in the 'companies' object": true,
+				"Verify that the values for 'Google' and 'Facebook' are non-negative integers": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate that the 'id' field is present and is a non-empty string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate the 'companies' object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify that 'Google' and 'Facebook' keys are present in the 'companies' object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify that the values for 'Google' and 'Facebook' are non-negative integers": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				341
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Validate that the 'id' field is present and is a non-empty string": true,
+					"Validate the 'companies' object": true,
+					"Verify that 'Google' and 'Facebook' keys are present in the 'companies' object": true,
+					"Verify that the values for 'Google' and 'Facebook' are non-negative integers": true
+				}
+			]
+		},
+		{
+			"id": "e43887fd-5222-4b9d-b857-0924e4030248",
+			"name": "Invoice Parsing By Id",
+			"url": "https://csvdemomockappp.bundlewallet.com.//invoice/1b9c4462-d43c-4320-bedb-06f0a591dfdb",
+			"time": 256,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Validate the id field is not empty": true,
+				"Validate the companies field is an object": true,
+				"Validate that the companies object contains 'Google' and 'Facebook' as keys": true,
+				"Validate the values for 'Google' and 'Facebook'": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate the id field is not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate the companies field is an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate that the companies object contains 'Google' and 'Facebook' as keys": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate the values for 'Google' and 'Facebook'": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				256
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Validate the id field is not empty": true,
+					"Validate the companies field is an object": true,
+					"Validate that the companies object contains 'Google' and 'Facebook' as keys": true,
+					"Validate the values for 'Google' and 'Facebook'": true
+				}
+			]
+		},
+		{
+			"id": "b2418032-6bf7-4089-915b-7eb2634981a4",
+			"name": "Company Details From Invoice Id",
+			"url": "https://csvdemomockappp.bundlewallet.com.//invoice/1b9c4462-d43c-4320-bedb-06f0a591dfdb/company?companyName=Google",
+			"time": 258,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response has the required fields": true,
+				"Employee ID is a non-empty string": true,
+				"Rate per hour is a non-negative number": true,
+				"Hours worked is a non-negative number": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has the required fields": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Employee ID is a non-empty string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Rate per hour is a non-negative number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Hours worked is a non-negative number": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				258
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response has the required fields": true,
+					"Employee ID is a non-empty string": true,
+					"Rate per hour is a non-negative number": true,
+					"Hours worked is a non-negative number": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 855,
+	"collection": {
+		"requests": [
+			{
+				"id": "de3feaec-03a2-4840-9105-f398f4732f2d",
+				"method": "POST"
+			},
+			{
+				"id": "e43887fd-5222-4b9d-b857-0924e4030248",
+				"method": "GET"
+			},
+			{
+				"id": "b2418032-6bf7-4089-915b-7eb2634981a4",
+				"method": "GET"
+			}
+		]
+	}
+}
